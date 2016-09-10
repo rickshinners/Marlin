@@ -193,9 +193,9 @@ Here are some standard links for getting your machine calibrated:
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 // Ultimaker
-    #define  DEFAULT_Kp 22.2
-    #define  DEFAULT_Ki 1.08
-    #define  DEFAULT_Kd 114
+//    #define  DEFAULT_Kp 22.2
+//    #define  DEFAULT_Ki 1.08
+//    #define  DEFAULT_Kd 114
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -206,6 +206,10 @@ Here are some standard links for getting your machine calibrated:
 //    #define  DEFAULT_Kp 63.0
 //    #define  DEFAULT_Ki 2.25
 //    #define  DEFAULT_Kd 440
+// Auto-tune with e3d-v6
+    #define  DEFAULT_Kp 26.08
+    #define  DEFAULT_Ki 1.89
+    #define  DEFAULT_Kd 89.72
 #endif // PIDTEMP
 
 //===========================================================================
@@ -394,9 +398,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
  #define MESH_BED_LEVELING    // Enable mesh bed leveling
 
 #if defined(MESH_BED_LEVELING)
-  #define MESH_MIN_X 20
+  #define MESH_MIN_X 50
   #define MESH_MAX_X (X_MAX_POS - MESH_MIN_X)
-  #define MESH_MIN_Y 20
+  #define MESH_MIN_Y 50
   #define MESH_MAX_Y (Y_MAX_POS - MESH_MIN_Y)
   #define MESH_NUM_X_POINTS 3  // Don't use more than 7 points per axis, implementation limited
   #define MESH_NUM_Y_POINTS 3
@@ -520,8 +524,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.19,80.19,4000,90}  // default steps per unit for Ultimaker
-#define DEFAULT_MAX_FEEDRATE          {250, 250, 2, 25}    // (mm/sec)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.19,80.19,800,90}  // default steps per unit for Ultimaker
+#define DEFAULT_MAX_FEEDRATE          {250, 250, 25, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {1000,1000,5,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration in mm/s^2 for printing moves
