@@ -329,9 +329,9 @@
   //#define  DEFAULT_Kd 440
   
   // Auto-tune with e3d-v6
-  #define  DEFAULT_Kp 26.08
-  #define  DEFAULT_Ki 1.89
-  #define  DEFAULT_Kd 89.72
+  #define  DEFAULT_Kp 23.86
+  #define  DEFAULT_Ki 1.62
+  #define  DEFAULT_Kd 87.94
 
 #endif // PIDTEMP
 
